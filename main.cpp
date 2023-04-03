@@ -40,9 +40,11 @@ int main(int argc, char* argv[]) {
         fs::create_directory(replica_folder);
     }
 
-    if (!fs::is_regular_file(logging_file)) {
-        std::cerr << "Logging file has to be a regular text file";
-        return static_cast<int>(ErrorCode::LOG_FILE_FORMAT_ERROR);
+    if (fs::exists(logging_file)){
+        if (!fs::is_regular_file(logging_file)) {
+            std::cerr << "Logging file has to be a regular text file";
+            return static_cast<int>(ErrorCode::LOG_FILE_FORMAT_ERROR);
+        }
     }
 
     std::ofstream logfile(logging_file, std::ios_base::app);
@@ -54,7 +56,17 @@ int main(int argc, char* argv[]) {
 
     int interval = 0;
     if (argc > 4) {
-        interval = std::stoi(argv[4]);
+        try {
+            interval = std::stoi(argv[4]);
+            if (interval <=0){
+                std::cerr << "Interval should be positive" <<std::endl;
+                return static_cast<int>(ErrorCode::NEGATIVE_INTERVAL);
+            }
+        } catch (const std::invalid_argument& e) {
+            std::cerr << "Interval should be specified in seconds, number format!" <<std::endl;
+            return static_cast<int>(ErrorCode::WRONG_INTERVAL_FORMAT);
+        }
+
     }else{
         std::cerr << "Interval Not specified!";
         return static_cast<int>(ErrorCode::INTERVAL_NOT_SPECIFIED);

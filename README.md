@@ -39,8 +39,8 @@ make
 
 * Programm accepts 4 arguments in the following order: 
 * source folder - there's a test_src folder provided by me for testing the program
-* replica folder
-* logging file 
+* replica folder - is not necessarily to exist - will be created if so
+* logging file  - is not necessarily to exist - will be created if so
 * interval specified in seconds 
 
 ### Important !!!
