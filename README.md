@@ -16,13 +16,14 @@
 ## Compilation 
 
 * Clone the project: 
-``` git clone ```
+$ git clone 
 
 * In root directory of the project:
-``` mkdir build
-  cd build 
-  cmake .. 
-  make ```
+$ mkdir build
+$ cd build 
+$ cmake ..
+$ make
+
 
 ### The result of this will be a bin directory in build with an executive file (named synchronize) in it 
 
@@ -30,7 +31,7 @@
 
 * In build/bin directory run the following: 
 
-```ff ```
+` `
 
 * Programm accepts 4 arguments in the following order: 
 * source folder 
