@@ -38,15 +38,16 @@ make
 ```
 
 * Programm accepts 4 arguments in the following order: 
-* source folder 
+* source folder - there's a test_src folder provided by me for testing the program
 * replica folder
 * logging file 
 * interval specified in seconds 
 
+### Important !!!
 
-** The program will be in an infinite running loop until stopped 
-** If stopped with ctrl-c shortcut in terminal - will exit with "Program execution was stopped" and success code also specified [in here]()
-** The logging is being output both to the console and logging file (should be specified) 
+* The program will be in an infinite running loop until stopped 
+* If stopped with ctrl-c shortcut in terminal - will exit with "Program execution was stopped" and success code also specified [in here](https://github.com/ivddorrka/veeam_test/blob/master/include/error_codes.h)
+* The logging is being output both to the console and logging file (should be specified) 
 
 ### Example of execution in command line: 
 
