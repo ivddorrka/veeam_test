@@ -46,7 +46,6 @@ make
 ### Important !!!
 
 * The program will be in an infinite running loop until stopped 
-* If stopped with ctrl-c shortcut in terminal - will exit with "Program execution was stopped" and success code also specified [in here](https://github.com/ivddorrka/veeam_test/blob/master/include/error_codes.h)
 * The logging is being output both to the console and logging file (should be specified) 
 
 ### Example of execution in command line: 
