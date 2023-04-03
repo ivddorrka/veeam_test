@@ -3,20 +3,22 @@
 
 ## Source code
 
-1. [Include]()
-- [error_codes.h]() - return codes to avoid magical numbers
-- [synchro_logic.h]() - header with program's logic functions declarations
-2. [SRC]()
--[synchro_logic.cpp]() - implementations for functions delcared in [include folder]()
+1. [Include](https://github.com/ivddorrka/veeam_test/tree/master/include)
+- [error_codes.h](https://github.com/ivddorrka/veeam_test/blob/master/include/error_codes.h) - return codes to avoid magical numbers
+- [synchro_logic.h](https://github.com/ivddorrka/veeam_test/blob/master/include/synchro_logic.h) - header with program's logic functions declarations
+2. [SRC](https://github.com/ivddorrka/veeam_test/tree/master/src)
+-[synchro_logic.cpp](https://github.com/ivddorrka/veeam_test/blob/master/src/synchro_logic.cpp) - implementations for functions delcared in [include folder](https://github.com/ivddorrka/veeam_test/tree/master/include)
 
-3. [main]()
+3. [main](https://github.com/ivddorrka/veeam_test/blob/master/main.cpp)
 - Starts the program
 - Checks for initial issues
 
 ## Compilation 
 
 * Clone the project: 
-$ git clone 
+``` 
+git clone git@github.com:ivddorrka/veeam_test.git
+```
 
 * In root directory of the project:
 ```
@@ -31,7 +33,9 @@ make
 
 * In build/bin directory run the following: 
 
-` `
+```
+./synchronize "../../test_src" "../../test_replica" "../../logging" 180 
+```
 
 * Programm accepts 4 arguments in the following order: 
 * source folder 
@@ -44,7 +48,12 @@ make
 ** If stopped with ctrl-c shortcut in terminal - will exit with "Program execution was stopped" and success code also specified [in here]()
 ** The logging is being output both to the console and logging file (should be specified) 
 
-### Example of logging file after different changes while the program is runnig: 
+### Example of execution in command line: 
 
-<screenshot> 
+![Screenshot](img/execution_example.png)
+
+### Logging file example: 
+
+![Screenshot](img/logfile_example.png)
+
 
