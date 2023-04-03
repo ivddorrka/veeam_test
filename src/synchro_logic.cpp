@@ -75,9 +75,3 @@ void log(const std::string& message, const std::string& log_file_path){
     logfile << "[" << time_string << "] " << message << std::endl;
 
 }
-
-
-void CtrC_handler(int signum){
-    std::cout << "Program execution was stopped"<< std::endl;
-    exit(signum);
-}

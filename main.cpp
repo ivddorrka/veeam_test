@@ -9,7 +9,6 @@
 #include "error_codes.h"
 #include "synchro_logic.h"
 
-
 namespace fs = std::filesystem;
 
 int main(int argc, char* argv[]) {
@@ -79,10 +78,6 @@ int main(int argc, char* argv[]) {
     std::string time_string = std::ctime(&time);
     time_string.erase(time_string.length() - 1);
 
-
-
-    signal(static_cast<int>(ErrorCode::SUCCESS), CtrC_handler);
-
     // start synchronization
     while (true) {
         logfile << "[" << time_string << "] " << "Synchronizing" << std::endl;
@@ -91,6 +86,7 @@ int main(int argc, char* argv[]) {
         if (interval > 0) {
             std::this_thread::sleep_for(std::chrono::seconds(interval));
         }
+
     }
 
     return static_cast<int>(ErrorCode::SUCCESS);

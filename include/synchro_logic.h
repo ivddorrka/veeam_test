@@ -25,5 +25,4 @@ void synchronize_folders(const fs::path& source_folder, const fs::path& destinat
 void log(const std::string& message, const std::string& filename);
 // Log to file the changes
 
-void CtrC_handler(int signum);
 #endif // SYNCHRO_LOGIC_H
