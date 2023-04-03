@@ -19,12 +19,12 @@
 $ git clone 
 
 * In root directory of the project:
-$ mkdir build
-$ cd build 
-$ cmake ..
-$ make
-
-
+```
+mkdir build
+cd build 
+cmake ..
+make
+```
 ### The result of this will be a bin directory in build with an executive file (named synchronize) in it 
 
 ## Execution 
